@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+body {
+  background: #0B0E11;
+}
+
+#app {
+  height: 100vh;
+  background: #0B0E11;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 10px;
+}
+
+#chat_container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  align-content: left;
+}
+
+/* hides scrollbar */
+#chat_container::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.ai {
+  background: #1c2329;
+  border-radius: 18px;
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  align-items: center;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: small;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+
+  background: #5436da00;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai .profile {
+  background: #10a37e00;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.message {
+  flex: 1;
+
+  color: #dcdcdc;
+  font-size: 20px;
+
+  max-width: 100%;
+  overflow-x: scroll;
+
+  /*
+   * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
+   * specifies how white space within an element should be handled. It is similar to the "pre" value, which tells the browser to treat all white space as significant and to preserve it exactly as it appears in the source code.
+   * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
+   * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
+  */
+  white-space: pre-wrap; 
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hides scrollbar */
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8px 8px 4px 8px;
+  background: #1c2329;
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0px 6px 20px 6px;
+
+    /* Otros estilos */
+    border: 1px solid #44ddf100; /* Agregamos un borde al formulario */
+    border-radius: 18px;
+    transition: border 0.5s; /* Agregamos una transición suave al cambio de borde */
+  }
+  
+  form:hover {
+    border: 1px solid #0085FF; /* Cambiamos el color del borde al pasar el ratón por encima */
+  }
+  
+  /* Creamos la animación */
+  @keyframes shine {
+    from {
+      border-color: #44DCF1; /* Iniciamos el brillo con el color #44DCF1 */
+    }
+    to {
+      border-color: #0085FF; /* Terminamos el brillo con el color #0085FF */
+    }
+  }
+  
+  /* Aplicamos la animación al formulario */
+  form:hover {
+    animation: shine 0.5s linear forwards; /* La animación dura 0.5 segundos y es lineal */
+  }
+  
+
+
+textarea {
+  width: 100%;
+
+  color: #fff;
+  font-size: 18px;
+
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+form img {
+  width: 36px;
+  height: 36px;
+}
+
+
+
+.wrapper.ai:last-of-type {
+  animation: color-change 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes color-change {
+  0% {
+    border: 2px solid #44DCF1;
+  }
+  50% {
+    border: 2px solid #0085FF;
+  }
+  90% {
+    border: 2px solid #44DCF1;
+  }
+
+  100% {
+    border: 2px solid #1c2329;
+  }
+}
+
+
+
+
